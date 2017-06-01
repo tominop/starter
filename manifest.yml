@@ -1,0 +1,10 @@
+---
+applications:
+- name: ExpressEJSStarter
+  framework: node
+  runtime: node08
+  memory: 64M
+  instances: 1
+  host: ExpressEJSStarter-${random-word}
+  path: "."     
+  command: node app.js

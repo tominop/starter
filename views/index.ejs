@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html ng-app>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1><%= title %></h1>
+    <p>Welcome to <%= title %></p>
+    <p><input type="text" ng-model="input" /> {{ input }}</p>
+    <script src="js/angular.min.js"></script>
+    <script>
+      app.factory('userFactory', function($http) {
+      	var f = {};
+      	f.getUsers = function() {
+      		return $http.get("/users");
+      	}
+      	return f;
+      });
+    </script>
+  </body>
+</html>
